@@ -1,0 +1,13 @@
+torch
+torchvision
+torchaudio
+-f https://download.pytorch.org/whl/cu124
+
+flask 
+flask-cors
+transformers
+accelerate
+keyring
+openai
+
+huggingface_hub[cli]

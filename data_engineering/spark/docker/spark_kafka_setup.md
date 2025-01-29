@@ -36,3 +36,15 @@ docker exec -it kafka /bin/bash
 
 # See latest messages in a Kafka topic - Consume messages from the Kafka topic 'test-topic'
 /usr/bin/kafka-console-consumer --bootstrap-server kafka:9092 --topic test-topic --from-beginning --timeout-ms 10000
+
+
+# Access the HDFS namenode container
+docker exec -it hdfs-namenode /bin/bash
+
+# Put the CSV file into HDFS
+hdfs dfs -put /sample_data/sample_data.csv /
+
+# Grant write Access to jovyan user
+docker exec -it hdfs-namenode /bin/bash
+
+hdfs dfs -chmod -R 777 /

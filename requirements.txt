@@ -9,5 +9,7 @@ transformers
 accelerate
 keyring
 openai
+pyspark==3.5.4
+confluent-kafka
 
 huggingface_hub[cli]

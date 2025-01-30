@@ -12,3 +12,4 @@ keyring==25.6.0
 openai==1.60.2
 pyspark==3.5.4
 transformers==4.48.1
+delta-spark==3.3.0

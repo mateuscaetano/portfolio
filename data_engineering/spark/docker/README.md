@@ -48,3 +48,11 @@ hdfs dfs -put /sample_data/sample_data.csv /
 docker exec -it hdfs-namenode /bin/bash
 
 hdfs dfs -chmod -R 777 /
+
+# For Delta Table support
+
+docker exec -it spark-master /bin/bash
+
+spark-shell --packages io.delta:delta-spark_2.12:3.3.0 --conf "spark.hadoop.fs.defaultFS=hdfs://hdfs-namenode:8020" --conf "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog"
+
+ 

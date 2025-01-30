@@ -33,7 +33,7 @@ services:
     networks:
       - spark-network
     environment:
-      - SPARK_MASTER=spark://spark-master:7077
+      - SPARK_MASTER=spark://spark-master:7077      
     ports:
       - "8888:8888"
     volumes:
@@ -81,7 +81,7 @@ services:
     volumes:
       - hdfs-namenode:/hadoop/dfs/namenode      
       - ./../sample_data:/sample_data
-    
+
   hdfs-datanode:
     image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
     container_name: hdfs-datanode
